@@ -36,17 +36,3 @@ with psycopg2.connect(
 
 
 conn.close()
-
-
-# csvpath = "../homework-1/north_data/customers_data.csv"
-# with open(csvpath, 'r', encoding='windows-1251') as file:
-#     data = csv.DictReader(file)
-#     for row in data:
-#         customer_id, company_name, contact_name = row["customer_id"], row["company_name"], row["contact_name"]
-#         # print(customer_id, company_name, contact_name)
-#         with conn:
-#             with conn.cursor() as cur:
-#                 cur.execute('INSERT INTO customers VALUES (%s, %s, %s)', (customer_id, company_name, contact_name)) # Добавление данных (1 строка)
-#                     # rows = cur.fetchall()
-#                     # for row in rows:
-#                     #     print(row)
