@@ -34,5 +34,6 @@ with psycopg2.connect(
                 cur.execute('INSERT INTO orders VALUES (%s, %s, %s, %s, %s)', (order_id, customer_id, employee_id, order_date,
                                                                        ship_city))
 
-
+conn.commit()
 conn.close()
+cur.close()
